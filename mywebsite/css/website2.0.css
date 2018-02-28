@@ -11,7 +11,7 @@ a:focus{outline:0;text-decoration:none}
 .clearfix:after{clear:both}
 .fR{float:right}
 .fL{float:left}
-html{font-size:15px;font-family:'Microsoft YaHei';}
+html{font-size:16px;font-family:'Microsoft YaHei';}
 #width{width:100%;margin:0 auto;}
 .dwt {
     width: 100%;
@@ -24,10 +24,16 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
     top: 0;
 }
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+#width:before{
+    content: "";
+    height: 60px;
+    width: 100%;
+    display: block;
 
+}
 
 /* 头部样式 */
-.header{box-shadow: 1px 0.5px #8a8a8a;line-height:60px;border-bottom:solid 2px #ff6607;color:#888;width:100%;z-index:10;background:#fff;position:relative}
+.header{box-shadow: 1px 0.5px #8a8a8a;line-height:60px;border-bottom:solid 2px #ff6607;color:#888;width:100%;z-index:10;background:#fff;position:fixed}
 .headers{
 	margin: 0 auto;
 	    padding-left: 20px;
@@ -39,6 +45,11 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
 .header a:hover{color:#ff6607}
 .header a:active{color:#ff6607}
 .header span{margin-left:30px}
+.tabli:hover{font-size:18px;color:#f63;cursor:pointer;}
+.tabli.active {
+    color: #f63;
+    font-size: 17px;
+}
 .chiweb .chinese,.enweb .english{position:absolute;right:134px;top:20px;display:inline-block;width:68px;height:20px;text-align:center;vertical-align:middle;padding:0;line-height:20px;margin:0;margin-right:10px}
 .chiweb .english,.enweb .chinese{position:absolute;right:60px;top:20px;display:inline-block;width:68px;height:20px;border-left:solid 1px #dcdcdc;text-align:center;vertical-align:middle;padding:0;line-height:20px;margin:0;color:#dcdcdc;padding-left:10px}
 .chiweb .english:hover,.enweb .chinese:hover{color:#888}
@@ -46,7 +57,9 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
 /**banner样式*/
 .swiper-container{width:100%;height:100%;z-index:1}
 .swiper-slide{text-align:left;font-size:14px}
-.banner{text-align:left;height:640px;width:100%}
+.banner{text-align:left;height:640px;max-width: 800px;
+    margin: 30px auto;
+}
 .s11{box-sizing:border-box;background-color:#d56;padding:260px 0 0 280px}
 .s1{box-sizing:border-box;background-color:#d56;padding:260px 0 0 280px}
 .s2{box-sizing:border-box;background-color:#f43;padding:260px 0 0 280px}
@@ -80,7 +93,7 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
 .swiper2 .swiper-pagination-bullet{width:10px;height:10px;border-radius:50%;background:0 0;opacity:1;border:solid 1px #fff}
 .swiper2 .swiper-pagination-bullet-active{width:10px;height:10px;border-radius:50%;background:#fff;opacity:1;border:solid 1px #fff}
 .swiper2.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:14px 0;display:block}
-.spIntro{font-size:15px;line-height:25px;}
+.spIntro{font-size:16px;line-height:30px;}
 .spHeader{font-size:30px;font-weight:700;margin-bottom:25px}
 .introContent{width:100%;max-width:1200px;foat:none;margin:0 auto;}
 .enweb .introContent{height:275px}
@@ -156,17 +169,8 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
 	width:100%; 
 }
 
-.contact {
-	width: 100%;
-	box-sizing: border-box;
-	color: #333333;
-	word-break: break-all;
-	font-size: 14px;
-	padding-top: 60px;
-	max-width: 1200px;
-	    margin: 0 auto;
-	    padding: 0 20px;
-}.ctName{height:41px;text-align:center;    font-size: 24px;font-weight: normal;margin-top:10px;color:#ff6607;}
+.contactBox  .contact {width: 100%;box-sizing: border-box;color: #333333;word-break: break-all;font-size: 16px;padding-top: 60px;max-width: 1200px;margin: 0 auto;padding: 0 20px;text-align: center;line-height: 35px;}
+.ctName{height:41px;text-align:center;    font-size: 24px;font-weight: normal;margin-top:10px;color:#ff6607;}
 .ctDetail{line-height:22px;}
 .swiper3{padding-top:66px}
 .jobBox{background-color:#dcdcdc;color:#fff;height:460px;overflow:hidden;min-width:490px;max-width:1200px;margin:0 auto;margin-bottom: 60px;margin-top: 40px;}
@@ -178,9 +182,7 @@ html{font-size:15px;font-family:'Microsoft YaHei';}
 
 .jobChance{width:135px;margin:30px;margin-bottom:0;margin-left: 20px;padding-bottom:6px;font-size:24px;font-weight:normal;display:inline-block;float:left;position:absolute;top:-5px}
 .muInvite{width:640px}
-.job{padding: 40px 20px 20px 23px;box-sizing:border-box;color:#fff;line-height:19px;font-size:13px}
-.jobName{font-size:21px;margin-bottom:20px;font-weight:700;color:#fff}
-.job li{list-style:none;line-height:22px}
+
 .jobs .swiper-pagination-bullet{width:10px;height:10px;display:inline-block;border-radius:100%;background:0 0;border-radius:0;margin-right:20px!important;border:solid 1px #333}
 .jobs .swiper-pagination-bullet-active{background:#343434}
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:12px 0;display:block}
@@ -205,15 +207,19 @@ body{position:relative;}
 .china{line-height:20px;background: #313131;padding-bottom: 5px;}
 .china1{line-height:20px;color:#939393;margin-top:12px}
 
+.s11,
+.s1,
+.s2,
+.s3,
+.s4,
+.s5{height:100%;}
 
-.s11{background-image:url(../images/banner11.jpg);background-size:cover;background-position:center center}
-.s1{background-image:url(../images/banner1.jpg);background-size:cover;background-position:center center}
-.s2{background-size:cover;background-image:url(../images/banner2.jpg);background-position:center center}
-.s3{background-size:cover;background-image:url(../images/banner3.jpg);background-position:center center}
-.s4{background-size:cover;background-image:url(../images/banner4.jpg);background-position:center center}
-.s5{background-size:cover;background-image:url(../images/s4banner.jpg);background-position:center center}
-.s7{background-size:cover;background-image:url(../images/activity.png);background-position:center;background-repeat: no-repeat;}
-.s7 .buyBtn{position:relative;top:30%;left:50%;}
+.s11{background-image:url(../images/pro6.png);background-size:cover;background-position:center center}
+.s1{background-image:url(../images/pro1.png);background-size:cover;background-position:center center}
+.s2{background-size:cover;background-image:url(../images/pro2.png);background-position:center center}
+.s3{background-size:cover;background-image:url(../images/pro3.png);background-position:center center}
+.s4{background-size:cover;background-image:url(../images/pro4.png);background-position:center center}
+.s5{background-size:cover;background-image:url(../images/pro5.png);background-position:center center}
 .introBox{background-size:cover;position:relative;background-image:url(../images/aboutus2.jpg);background-position-x:0!important}
 .coopBox{max-width: 1220px;margin: 0 auto;background-size:cover;position:relative;padding-left: 0px;padding-right: 0px;}
 .contactBox{
@@ -222,7 +228,7 @@ body{position:relative;}
 	padding-top: 50px;
 	background-repeat: repeat;
 	box-sizing: border-box;
-	height: 500px;
+	height: 400px;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -261,95 +267,6 @@ filter: alpha(opacity=50);}
 	.swiper1 .swiper-button-next:hover{
 		opacity: 1;
 	}
-/*add by rongw D:2017.1.22
- * 添加下载app的入口样式
- * */	
-.download.clearfix {
-    padding: 40px 0;
-    max-width: 1200px;
-    background: white;
-    margin: 0 auto;
-}
-.fL.downbox {
-	    width: 50%;
-	    padding-top: 8%;
-	    /* margin-left: 10px; */
-	    padding-left: 10px;
-	    box-sizing: border-box;
-}
-p.downtips {
-    font-size: 24px;
-}
-.downlog .downintro {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding-right: 60px;
-    box-sizing: border-box;
-    line-height: 22px;
-}
-.downlog img{
-	display: block;
-}
-.androidbtn {
-    margin-top: 20px;
-}
-.iosbtn, .pcbtn{
-    margin-top: 20px;
-    cursor: pointer;
-}
-.cord.fR {
-    margin-top: 18px;
-    float: left;
-}
-.cord.fR img {
-    width: 133px;
-}
-.downlog.fL a {
-    display: block;
-    width: 100px;
-    float: left;
-}
-.pchref:hover{
-    text-decoration: underline;
-}
-.pchref{
-    color: #ff6607;
-}
-p.iostitle {
-	padding-left: 50px;
-    position: absolute;
-    top: 9px;
-    color: white;
-    width: 166px;
-    box-sizing: border-box;
-}
-p.iosintro {
-    padding-left: 50px;
-    position: absolute;
-    bottom: 12px;
-    color: white;
-    width: 166px;
-    box-sizing: border-box;
-}
-.nap {
-    width: 50%;
-    text-align: center;
-    box-sizing: border-box;
-}
-p.downtitle {
-	font-family: "zektonbo";
-	font-size: 30px;
-}
-p.downtips {
-    font-size: 14px;
-}
-.nap img {
-    width: 100%;
-}
-
-.download.clearfix.hide {
-    display: none;
-}
 
 /**
  * 官网更新
@@ -378,8 +295,7 @@ p.downtips {
 }
 .ctName {
     height: auto;
-    margin-top: -8px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .ctDetail {
@@ -395,6 +311,112 @@ p.downtips {
 	text-align: center;
 }
 
+/**
+ * 个人简历页面样式start
+ */
+            .email:hover{
+            cursor: pointer;
+            }
+                      /* 工作经历 */
+                      .jobbox{
+                        background: #945c4c;
+                        padding: 36px 0;
+                      }
+                      ul.jobcontent {
+                          padding: 30px 60px;
+                          line-height: 35px;
+                          font-size: 16px;
+                          box-sizing: border-box;
+                          border-radius: 20px;
+                              background: white;
+                              width: 80%;
+                              margin: 36px auto;
+                              float: none;
+                      }
+                      .jobcontent .title{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #945C4C;
+                      }
+                      .jobcontent .total{
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin: 20px 0;
+                        color:#AF7464;
+                      }
+                      .jobli li {
+                          margin-bottom: 6px;
+                      }
+                      .jobli li:before{
+                          content: "";
+                          width: 6px;
+                          height: 6px;
+                          border-radius: 50%;
+                          background: #945C4C;
+            display: inline-block;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                      }
+            /* 成果展示经验 */
+            .imgcenter{
+                width: 150px;
+                height: 150px;
+                text-align: center;
+                border-radius: 50%;
+                background-image: url(../images/myphoto.jpg);
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 20px auto 0;
+            }
+            .swiper-pagination.swiper-pagination-bullets {
+                text-align: center;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+            }
+            .swiper-pagination-bullet {
+                margin: 0 3px;
+            }
+            .procontent {
+                background: #a29971;
+                padding: 30px 0;
+                /* padding-top: 80px; */
+            }
+
+        /* 联系我 */
+
+              .c1 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0 8px;
+                color: red;
+                text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+            }
+                .c2 {
+                  font-size: 16px;
+                  font-weight: bold;
+                  margin: 0 8px;
+                  color: #3cf;
+                  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+                }
+            .c3 {
+               font-size: 16px;
+                   font-weight: bold;
+                   margin: 0 8px;
+                   color: #6c0;
+                   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+            }
+            .c4 {
+                font-size: 16px;
+                    font-weight: bold;
+                    margin: 0 8px;
+                    color: #f63;
+                    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+            }
+/**
+ * 个人简历样式end
+ */
 
 @media screen and (max-width:1440px) and (min-width:1270px){
 	.s11,.s1,.s2,.s3,.s4,.s5,.s7{padding-left:140px;padding-top:160px}
@@ -581,8 +603,8 @@ p.downtitle {
        .toolBar{padding-top:16px}
        .infoTitle{font-size:15px}
        .infoContain{font-size:18px;margin-bottom:5px}
-       .headers{padding-left:10px;line-height:46px;}
-       .headers img{width:100px;height:22.5px;margin-top:19px!important}
+
+       .headers img{width:0;height:22.5px;margin-top:19px!important}
        .header span{margin-left:11px}
        .enweb .header span{margin-left:10px}
        .chiweb .chinese,.enweb .english{right:100px}
@@ -637,349 +659,19 @@ p.downtitle {
        .banner{height:400px}
        .s2,.s3,.s4,.s5,.s7{padding-left:40px;padding-top:30px}
        .s11,.s1{padding-left:40px;padding-top:30px}
-
-}
-@media screen and (min-width: 420px;) and (max-width:600px;)  {
-
-.ctDetail,.ctDetail {
-	font-size:13px;
-	line-height:22px;
-    width: 80%;
-    box-sizing: border-box;
-    padding: 0;
-    padding-bottom: 10px;
-    text-align: center;
-        margin-left: 10%;
-}
-.ctName {
-margin-bottom: 20px;
-}
-.contactBox {
-    padding-bottom: 10px;
-    height: auto;
-}
-.fL.downbox {
-    padding-top: 100px;
-    margin: 0 auto;
-    float: none;
-    padding: 0 15px;
-    box-sizing: border-box;
-    padding-top: 15px;
-    width: auto;
-}
-.nap img{
-    width: 100%;
-}
-.nap{
-    width: 100%;
-    float: none;
-    height: auto;
-}
-.downlog.fL {
-    width: auto;
-}
-.nap{
-    width: 100%;
-    float: none;
-    height: auto;
-    margin: 0;
-}
-.fL.downbox {
-    padding-top: 100px;
-    margin: 0 auto;
-    float: none;
-    padding: 0 20px;
-    box-sizing: border-box;
-    padding-top: 15px;
-    float:none;
-}
-.downlog .downintro {
-	padding-right: 0px;
-	margin-bottom: 10px;
-	margin-top: 15px;
-}
-p.downtitle {
-	font-size: 26px;
-	margin-bottom: 0;
-	line-height: 32px;
-    }
-    .downlog img {
-        width: 90%;
-    }
-    .androidbtn {
-        margin-top: 10px;
-    }
-    .downlog.fL a {
-        width: 80px;
-    }
-    .iosbtn {
-        margin-top: 10px;
-    }
-    .download.clearfix {
-        padding: 35px 0;
-       } 
-       .entitle {
-           font-size: 30px;
+       /**
+        * 我的简历手机端样式微调
+        */
+       ul.jobcontent {
+           padding: 20px;
+           width: 90%;
+           margin: 26px auto;
        }
-
-}
-@media screen and (max-width:410px){
-	.enweb .jobs{height:720px}
-	.enweb .jobBox{height:720px}
-	.jobName{line-height:26px}
-}
-@media screen and (max-width:400px) and (min-width:380px){
-.enweb .jobs{height:800px}
-.enweb .jobBox{height:800px}
-.jobName{line-height:26px}
 }
 
-@media screen and (max-width:370px) and (min-width:361px){
-.enweb .jobs{height:800px}
-.enweb .jobBox{height:800px}
-.jobName{line-height:26px}
-}
-@media screen and (max-width:360px) and (min-width:320px){
-.enweb .jobs{height:880px}
-.enweb .jobBox{height:880px}
-.jobName{line-height:26px}
-}
+
 
 .downlog .doublecord{
     width: 100px;
 }
-/**
- * 视频大赛活动页面样式 start
- */
- body.activity{
-     background-color: #f1626e;
-     background-image: url(../images/bg.png);
-     background-repeat: repeat-x;
-     width: 100%;
- }
- .activity input {
-     background-color: #fff200;
-     border-bottom: solid 1px #333;
-     margin-left: 20px;
-     width: 160px;
- }
- .activity div#contain {
-     width: 100%;
-     max-width: 500px;
-     margin: 0 auto;
 
- }
-   .activity  .top{
-         background-image: url(../images/banner.png);
-         width: 100%;
-         height: 300px;
-         max-width: 600px;
-         background-size: 100%;
-         background-repeat: no-repeat;
-         margin: 0 auto;
-         /* background-color: #fff200; */
-     }
-  .activity  .contentbox iframe {
-         margin-top: 15px;
-     }
-   .activity  .contentbox {
-         position: relative;
-         box-sizing: border-box;
-         background-image: url(../images/top1.png),url(../images/center.png),url(../images/bottom1.png);
-         background-size: contain,contain,contain;
-         background-repeat: no-repeat,repeat,no-repeat;
-         background-position: 0 0,0px 200px,bottom left;
-         padding: 0 60px;
-     }
-   .activity  .topbg{
-         background-image: url(../images/top1.png);
-         background-size: 100% 100%;
-         background-repeat: no-repeat;
-         width: 100%;
-         height: 78px;
-         margin-bottom: -1px;
-     }
-   .activity  .bottombg{
-         background-image: url(../images/bottom1.png);
-         background-size: 100% 100%;
-         background-repeat: no-repeat;
-         width: 100%;
-         height: 80px;
-         margin-bottom: 60px;
-         margin-top: -1px;
-     }
-
-    .activity .rightbg{
-         background-image: url(../images/right.png);
-         width: 30px;
-         background-position: top right;
-         background-repeat: repeat-y;
-         background-size: contain;
-         position: absolute;
-         right: -13px;
-     }
-    .activity .leftbg{
-         background-image: url(../images/left.png);
-         width: 30px;
-         background-position: top left;
-         background-repeat: repeat-y;
-         background-size: contain;
-         position: absolute;
-         left: -18px;
-     }
-    .activity p.page {
-        font-size: 15px;
-        line-height: 24px;
-        color: #333;
-     }
-    .activity .videobox{
-         max-width: 320px;
-         margin: 0 auto;
-     }
-    .activity div#contain img{
-         width: 100%;
-     }
-    .activity h2 {
-         color: white;
-         font-size: 25px;
-         text-align: center;
-         margin-bottom: 12px;
-         margin-top: -30px;
-     }
-    .activity .page2 {
-            padding: 0 60px;
-     }
-   .activity .page2 li {
-         line-height: 35px;
-     }
-    .activity div#contain .upimg{
-         width: 170px;
-         margin: 0 auto;
-         display: block;
-         margin-top: 20px;
-     }
-   .activity  textarea#videointro {
-         width: 200px;
-         height: 130px;
-     }
-    .activity textarea#videointro {
-         width: 100%;
-         height: 130px;
-         background: #fff200;
-         border: solid 1px #333;
-     }
-
-    .activity .textarea{
-         border-bottom: solid 1px #333;
-         margin-left: 20px;
-         display: inline-block;
-         width: 46%;
-         line-height: 23px;
-         width: 160px;
-     }
-    .activity input#file {
-         width: 100px;
-     }
-    .activity div#upload {
-         display: inline-block;
-         width: 120px;
-         margin-left: 20px;
-         border: solid 1px #333;
-         text-align: center;
-         color: #333;
-         line-height: 26px;
-     }
-     .activity .hide{
-     display: none !important;
- }
- .activity form {
-     margin-top: 20px;
- }
- .activity span#reupload {
-     color: #ff6607;
-     margin-left: 10px;
- }
- .activity .filebox {
-     display: inline-block;
-     margin-left: 20px;
- }
- .activity b {
-     width: 60px;
-     display: inline-block;
- }
- .activity input#videodesc,.activity input#name
- ,.activity input#email,.activity .textarea,.activity div#upload {
-     margin-left: 16px;
- }
- .activity .bottomp{margin-bottom: 12px;}
- .activity .topp{margin-top: 12px;}
-
-     input[type="radio"] {
-         width: 20px;
-         margin-left: 6px;
-         vertical-align: -2px;
-         margin-right: 10px;
-     }
-        .activity #loading{
-             position: fixed;
-                 top: 30%;
-                 z-index: 3;
-                 width: 180px;
-                 left: 0;
-                 right: 0;
-                 margin: 0 auto;
-                 color: #ff6607;
-                 line-height: 23px;
-                 font-size: 16px;
-         }
-        .activity #loading p {
-         position: relative;
-         z-index: 30;
-     }
-     .activity #loading img{
-         width: 100%;
-         z-index: 5;
-         position: relative;
-
-     }
-
-     @media screen and (max-width:600px){
-         .activity .contentbox {
-             padding: 0 20px;
-         }
-        .activity div#contain {
-             padding: 0 10px;
-             box-sizing: border-box;
-         }
-         .activity .page2 {
-             padding: 0 36px;
-         }
-     }
-     @media screen and (min-width:1000px){
-        .activity div#contain{
-            max-width: 1000px;
-        }
-        .activity  .top{
-            max-width: 1000px;
-        }
-        .activity  .topbg{
-            height: 118px;
-        }
-        .activity .videobox{
-            max-width: 820px;
-        }
-        .activity  .bottombg{
-            height: 118px;
-        }
-        .activity form {
-            width: 600px;
-            margin: 0 auto;
-            margin-top: 40px;
-        }
-        .activity p.page {
-            margin: 0 auto;
-        }
-     }
-     /**
-      * 视频大赛活动页面样式 end
-      */

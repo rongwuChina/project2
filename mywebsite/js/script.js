@@ -1,18 +1,20 @@
 
 	// swiper1
 	var swiper1 = new Swiper('.swiper1',{
-	           nextButton: '.swiper-button-next',
-	           prevButton: '.swiper-button-prev',
 	           autoplay:5000,
 	           autoplayDisableOnInteraction : false,
 	           speed:500,
 	           loop:true,
-	           spaceBetween: 10,
-	           effect: 'fade',
-	           paginationClickable: true,
-	           observer:true,//修改swiper自己或子元素时，自动初始化swiper
-	           observeParents:true,//修改swiper的父元素时，自动初始化swiper
-	           simulateTouch:false//启用内部的a链接
+	           effect: 'cube',
+	                 grabCursor: true,
+	                 cubeEffect: {
+	                   shadow: true,
+	                   slideShadows: true,
+	                   shadowOffset: 20,
+	                   shadowScale: 0.94,
+	                 },
+	                 pagination: '.swiper-pagination',
+	                 
 	});
 	// swiper3
 	var swiper3 = new Swiper('.swiper3', {
@@ -64,10 +66,6 @@
 		}
 	            
 	})
-	// 视觉差
-	$.stellar({
-	  horizontalOffset: false
-	});
 	//
 	$(window).resize(function(){
 		   var w=$(".swiper-slide").find("img").height();
@@ -77,26 +75,69 @@
 	//让页面居中显示
 	$(window).resize(function(){
 		var win=$(window).width();
-		if(win<600){
-		$('.banner').height(0.5*win);
+		if(win<800){
+		$('.banner').height(win*0.8);
 		}
-		else if(win>1440){
-		$('.banner').height(660);
-		}
-		else{
-		$('.banner').height(520);	
+		else if(win>800){
+		$('.banner').height(800*0.8);
 		}
 	});
 	$(function(){
 		var win=$(window).width();
-		if(win<600){
-		$('.banner').height(0.5*win);
+		if(win<800){
+		$('.banner').height(win*0.8);
 		}
-		else if(win>1440){
-		$('.banner').height(660);
-		}
-		else{
-		$('.banner').height(520);	
+		else if(win>800){
+		$('.banner').height(800*0.8);
 		}
 	});
 
+	
+	$('.me').click(function(){
+                     $('.tabli').removeClass('active');
+                     $(this).addClass('active');
+		$(window).scrollTop($('#me').prop("offsetTop")-60)
+	})
+	$('.job').click(function(){
+		$('.tabli').removeClass('active');
+		$(this).addClass('active');
+		$(window).scrollTop($('#job').prop("offsetTop")-60)
+	})
+	$('.project').click(function(){
+		$('.tabli').removeClass('active');
+		$(this).addClass('active');
+		$(window).scrollTop($('#project').prop("offsetTop")-60)
+	})
+	$('.contact').click(function(){
+		$('.tabli').removeClass('active');
+		$(this).addClass('active');
+		$(window).scrollTop($('#contact').prop("offsetTop")-60)
+	})
+
+          $(window).scroll(function(){
+	          	var height1=$('#me').prop("offsetTop")-60;
+	          	var height2=$('#job').prop("offsetTop")-60;
+	          	var height3=$('#project').prop("offsetTop")-60;
+	          	var height4=$('#contact').prop("offsetTop")-60;
+	          	
+          	           if($(window).scrollTop()<height2){
+          	           	$('.tabli').removeClass('active');
+          	           	$('.tabli.me').addClass('active');
+          	           }
+          	           else if($(window).scrollTop()<height3){
+          	           	$('.tabli').removeClass('active');
+          	           	$('.tabli.job').addClass('active');
+          	           }
+          	           else if($(window).scrollTop()>height3){
+
+          	           	if($(document).scrollTop()==$(document).height()-$(window).height()){
+          	           		$('.tabli').removeClass('active');
+          	           		$('.tabli.contact').addClass('active');
+          	           	}else{
+	          	           	$('.tabli').removeClass('active');
+	          	           	$('.tabli.project').addClass('active');
+	          	           }
+          	           }
+          	           
+
+          })
